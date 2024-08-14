@@ -1,0 +1,78 @@
+\documentclass{article}
+
+% Required packages
+\usepackage{graphicx} % For inserting images
+\usepackage[margin=1in,left=1.2in,includefoot]{geometry} % Page layout
+\usepackage{ragged2e} % For justified text
+\usepackage{setspace}  % For line spacing
+
+% Title information
+\title{\textbf{Ultrasonic-Based Security Alarm System}}
+\author{\textbf{Tatchemo Guiafaing Ronald VR512344} \\ Computer Engineering for Intelligent Systems \\ University of Verona, Italy}
+\date{\textbf{14 August 2024}}
+
+\begin{document}
+
+% Use one-and-a-half line spacing for readability
+\setstretch{1.5}
+
+\justifying
+
+% Title presentation
+\maketitle
+
+% Section 1: Introduction
+\section{Introduction}
+In an era where security has become paramount, the exploration of smart and efficient solutions to safeguard our environments is essential. This project presents an Ultrasonic-Based Security Alarm System utilizing Arduino, an open-source electronics platform, which effectively detects nearby objects and emits an alarming sound in proximity situations. This automatic alert system serves as a simple yet effective means to enhance security in various applications such as homes, offices, or public spaces.
+
+\section{Project Overview}
+The ultrasound sensor technology employed in this project measures distance by calculating the time it takes for an ultrasonic sound wave to return after bouncing off an object. Utilizing this principle, the system activates a buzzer whenever an object approaches within a specified threshold.
+
+\subsection{Components Used}
+The major components utilized in the development of this system include:
+\begin{itemize}
+    \item Arduino Uno
+    \item Ultrasonic Sensor (HC-SR04)
+    \item Buzzer
+    \item Breadboard and Jumper Wires
+\end{itemize}
+
+\section{Circuit Design}
+The circuit for the ultrasonic security alarm is designed to facilitate effective communication between the ultrasonic sensor and the Arduino board. The schematic representation of the circuit is shown in Figure \ref{fig:schematic}, while the detailed circuit diagram is presented in Figure \ref{fig:circuit_diagram}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{SCHEMATIC.png}
+    \caption{Schematic Representation of the Circuit}
+    \label{fig:schematic}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{circuit.png}
+    \caption{Circuit Diagram of the Ultrasonic Security Alarm}
+    \label{fig:circuit_diagram}
+\end{figure}
+
+\section{Implementation Steps}
+The implementation process encompasses several key steps:
+\begin{enumerate}
+    \item \textbf{Component Setup:} A meticulous arrangement of components on the breadboard, ensuring each element has the correct connections.
+    \item \textbf{Arduino Programming:} The Arduino was programmed utilizing the Arduino IDE. Initializing the pins allows the ultrasonic sensor to measure the distance continuously.
+    \item \textbf{Distance Measurement:} The sensor emits an ultrasonic pulse, which returns after reflecting off an object. The duration is converted into distance using the formula:
+    \[
+    \text{Distance} = \frac{\text{Duration}}{2} \times \text{Speed of Sound} \; (343 \text{ m/s})
+    \]
+    \item \textbf{Buzzer Activation:} Based on the measurement, the buzzer triggers if the distance is below a predefined threshold, providing an audio alert regarding potential proximity threats.
+\end{enumerate}
+
+\section{Testing and Results}
+The prototype underwent rigorous testing to determine its functionality. Various objects were placed at different distances from the ultrasonic sensor. The buzzer functioned accordingly, confirming effective distance detection and alert generation.
+
+\section{Conclusion}
+The Ultrasonic-Based Security Alarm demonstrated successful implementation and operation, showcasing its potential as a valuable tool for enhancing safety measures. Future enhancements may include integrating wireless communication to allow remote notifications and the addition of multiple sensors for broader area coverage.
+
+\section{Acknowledgments}
+I would like to express my gratitude to the faculty and my peers at the University of Verona for their unwavering support throughout this project. Special thanks to the Arduino community, which provided invaluable resources that facilitated this endeavor.
+
+\end{document}
